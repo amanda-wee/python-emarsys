@@ -14,10 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-from .api import Emarsys, EmarsysError
-# Silence potential warnings from static analysis tools:
-assert Emarsys
-assert EmarsysError
+from .api import Emarsys
+assert Emarsys  # Silence potential warnings from static analysis tools
 
 __author__ = "Eugene Wee"
 __copyright__ = "Copyright 2012, 42 Ventures Pte Ltd"
