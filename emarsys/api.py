@@ -58,8 +58,13 @@ class Emarsys(object):
         def __repr__(self):
             return str(self)
 
-    def __init__(self, username, secret_token, base_uri, tzinfo_obj=None):
+    def __init__(self,
+                 username,
+                 secret_token,
+                 base_uri=u"https://www1.emarsys.net/api/v2/",
+                 tzinfo_obj=None):
         """
+        Initialises the Emarsys API wrapper object.
         """
         self._username = username
         self._secret_token = secret_token
@@ -93,7 +98,7 @@ class Emarsys(object):
         except Exception as e:
             raise self.Error(message=repr(e))
 
-        if response.status_code in (404,):
+        if response.status_code in (401, 404):
             raise self.Error(
                 message=u"HTTP {status_code}: {reason} [{uri}]".format(
                     status_code=response.status_code,
