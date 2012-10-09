@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 import emarsys
 
-CLASSIFIERS = ["Development Status :: 1 - Planning",
+CLASSIFIERS = ["Development Status :: 2 - Pre-Alpha",
                "Intended Audience :: Developers",
                "License :: OSI Approved :: Apache Software License",
                "Natural Language :: English",
